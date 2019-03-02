@@ -1,0 +1,7 @@
+directoryIndex index.php
+
+
+rewriteEngine On
+#expression regulière
+rewriteRule ^[a-zA-Z0-9_\-]*?/?$ index.php?page=$1&%{QUERY_STRING}
+#QUERY_STRING permet d interpréte le restant des paramètres ( apres le point d interogation donc le where) en GET apres le where si il y en a
